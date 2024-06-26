@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/admin.css" />
+  </head>
+  <body>
+    <section class="admin">
+      <div class="row_grid">
+        <div class="admin_sidebar">
+          <div class="admin_sidebar_top">
+            <img src="./img/icon/logo.svg" alt="" />
+          </div>
+          <div class="admin_sidebar_content">
+            <ul>
+              <li>
+                <a href="./admin.html"><i class="ri-dashboard-2-fill"></i>Dashboard</a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-file-list-fill"></i>Quản Lí Sản Phẩm</a>
+              </li>
+              <li>
+                <a href=""><i class="ri-file-list-fill"></i>Thêm Sản Phẩm</a>
+              </li>
+              <li>
+                <a href=""><i class="ri-file-list-fill"></i>Quản Lí Nhân Viên</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="admin_content">
+          <div class="admin_content_add">
+            <div class="admin_content_add_title">
+              <h2>Thêm Sản Phẩm</h2>
+          </div>
+          <div id="productForm" class="admin_content_add_form">
+            <div class="admin_content_add_form_left">
+                <div class="admin_content_add_form_input">
+                    <input type="text" id="productName" placeholder="Tên Sản Phẩm" required>
+                    <input type="text" placeholder="Chất liệu" required>
+                </div>
+                <div class="admin_content_add_form_input">
+                    <input type="number" id="price" placeholder="Giá bán" required>
+                    <input type="number" id="price-reduced"placeholder="Giám giảm" required>
+                </div>
+                <textarea  name="" id="editor">Đặc điểm nổi bật</textarea>
+                <textarea name="" id="editordes" >Mô tả sản phẩm</textarea>
+                <button type="submit">Thêm sản phẩm</button>
+            </div>
+            <div class="admin_content_add_form_right">
+                <div class="admin_content_add_form_right_image">
+                    <label for="file" >Thêm ảnh đại diện</label>
+                    <input id="file" type="file" id="image" accept="image/*" style="display: none;">
+                </div>
+                <div class="admin_content_add_form_right_image">
+                    <label for="files" id="imagesp" >Thêm ảnh sản phẩm</label>
+                    <input id="files" type="file" id="image" accept="image/*" style="display: none;">
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="productList">
+          <h2>Danh Sách Sản Phẩm</h2>
+          <ul id="products"></ul>
+      </div>
+      </div>
+    </section>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+            ClassicEditor
+            .create( document.querySelector( '#editordes' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+    <script src="./js/addsp.js"></script>
+  </body>
+</html>
