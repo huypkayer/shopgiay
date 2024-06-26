@@ -1,0 +1,125 @@
+:root {
+  --main-bg-color: #e2ebf0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+.row_grid {
+  display: grid;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+}
+/* main */
+.admin .row_grid {
+  grid-template-columns: 20% 80%;
+}
+.admin_sidebar {
+  background-color: #333333;
+  height: 100vh;
+}
+
+.admin_sidebar_content {
+  padding: 30px 0 0 30px;
+  color: #ffffff;
+}
+
+.admin_sidebar_content ul li{
+    width: 400px;
+}
+.admin_sidebar_content ul li a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.admin_sidebar_content ul li a:hover {
+  background-color: #ffee10;
+  color: black;
+  transition: all 0.5s ease 0s;
+}
+.admin_sidebar_top {
+  margin-top: 10px;
+  text-align: center;
+  height: 78px;
+  border-bottom: 1px solid gray;
+}
+
+.admin_sidebar_top img {
+}
+.admin_content {
+    margin-left: 80px;
+    margin-top: 80px;
+  background-color: #ffffff;
+}
+
+/* add */
+.admin_content_add_form{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.admin_content_add_form_input{
+}
+.admin_content_add_form_input input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    margin: 10px;
+    padding-left: 5px;
+    background-color: #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+.admin_content_add_form_left textarea{
+    width: 620px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    outline: none;
+    padding: 6px;
+    border: none;
+    background-color: #ccc;
+}
+
+.admin_content_add_form_left button{
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+}
+.admin_content_add_form_left button:hover{
+    background-color: #ffee10;
+}
+
+.admin_content_add_form_right_image label{
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: -30%;
+    height: 50px;
+    width: 170px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+#productList {
+  margin-top: 30px;
+}
